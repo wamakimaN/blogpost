@@ -19,7 +19,7 @@ Login
         </div>
       {% endfor %}
       <!-- Login form -->
-      {{wtf.quick_form(form)}}
+      {{wtf.quick_form(login_form)}}
       <p> Don't have an account? <a href="{{url_for('auth.signup')}}">Sign up here</a></p>
      </div>
      <div clas="col-md-2"> </div>
