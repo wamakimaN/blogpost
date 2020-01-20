@@ -8,3 +8,7 @@ class PostForm(FlaskForm):
     summary = StringField('Quick Summary', validators=[Required()])
     content = TextAreaField('Content')
     submit = SubmitField('Post')
+
+class CommentForm(FlaskForm):
+    description = TextAreaField('Comment', validators=[Required()])
+    submit = SubmitField('Post')
