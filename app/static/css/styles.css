@@ -1,3 +1,37 @@
 .navs a{
   color: #F46036;
+  font-weight: bolder;
 }
+.posts{
+  text-align: center;
+}
+
+.topper{
+  background:linear-gradient( rgba(0, 0, 0, 0.698), rgba(0, 0, 0, 0.698) ), url(/static/pen.jpg) no-repeat center center/cover;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: beige;
+}
+
+.view{
+  background-color: #1B998B;
+}
+
+.linker{
+  color: #F46036;
+}
+
+.card{
+  margin-bottom: 30px;
+}
+
+.time{
+  color: #F46036;
+}
+ .card h2{
+  color: #F46036;
+ }

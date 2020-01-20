@@ -6,25 +6,38 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
     <ul class=" navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home
-          <span class="sr-only">(current)</span>
-        </a>
+        {% if current_user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Signin</a>
+        <a class="nav-link" href="{{url_for('auth.logout')}}">Log out</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('auth.login')}}">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" href="{{ url_for('auth.signup')}}">Signup</a>
       </li>
+      {%endif%}
     </ul>
     <ul class="navbar-nav ml-auto nav-flex-icons">
+      {% if current_user.is_authenticated %}
+      <li class="nav-item avatar">
+        <a class="nav-link p-0" href="{{url_for('main.profile',uname=current_user.username)}}">
+          <img src="/static/default.jpg" class="rounded-circle z-depth-0"
+            alt="avatar image" height="35">
+        </a>
+      </li>
+      {% else %}
       <li class="nav-item avatar">
         <a class="nav-link p-0" href="#">
           <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
             alt="avatar image" height="35">
         </a>
       </li>
+      {%endif%}
     </ul>
   </div>
 </nav>

@@ -1,12 +1,48 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<div class="container">
+
+<header class="jumbotron topper">
+  <H1>Welcome</H1>
+  <h3>To my Blog</h3>
+</header>
+<div class="container posts">
   <div class="row">
-    {%for post in posts%}
-    <div class="col-md-12">
-    {{post.title}}
+
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      {%for post in posts%}
+
+      <div class="card card-cascade wider">
+
+        <!-- Card image -->
+        <div class="view view-cascade gradient-card-header">
+
+          <!-- Title -->
+          <h2 class="card-header-title mb-3">{{post.title}}</h2>
+          <!-- Text -->
+          <p class="mb-0"><i class="time fas fa-calendar mr-2"></i>26.07.2017</p>
+
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body card-body-cascade text-center">
+
+          <!-- Text -->
+          <p class="card-text">{{post.summary}}</p>
+          <!-- Link -->
+          <a href="{{url_for('post.post',post_id=post.id)}}" class="linker d-flex flex-row-reverse p-2">
+            <h5 class="waves-effect waves-light">Read more<i class="fas fa-angle-double-right ml-2"></i></h5>
+          </a>
+
+        </div>
+        <!-- Card content -->
+
+      </div>
+      {% endfor%}
     </div>
-    {% endfor%}
+    <div class="col-md-2"></div>
+
   </div>
 </div>
 {% endblock %}
