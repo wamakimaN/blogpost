@@ -22,4 +22,9 @@ def newpost():
 
     return render_template('post/newpost.html',post_form = form)
 
+@post.route("/post/<int:post_id>")
+def post(post_id):
+    post = Post.query.get_or_404(post_id)
+    return render_template('post/post.html', title=post.title, post=post)
+
 
