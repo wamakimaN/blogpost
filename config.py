@@ -7,7 +7,7 @@ class Config:
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
     SECRET_KEY = 'youwillneverknowmysecret'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moses:123456@localhost/blogposts'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///myposts.db'
 
 
 
