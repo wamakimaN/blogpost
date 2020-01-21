@@ -1,3 +1,7 @@
+body{
+  font-family: 'Hind Guntur', sans-serif;
+}
+
 .navs a{
   color: #F46036;
   font-weight: bolder;
@@ -18,7 +22,7 @@
 }
 
 .view{
-  background-color: #1B998B;
+  background-color: darkcyan;
 }
 
 .linker{
@@ -26,7 +30,8 @@
 }
 
 .card{
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .time{
@@ -34,4 +39,8 @@
 }
  .card h2{
   color: #F46036;
+ }
+
+ .welcome{
+  font-family: 'Baloo Bhai', cursive;
  }

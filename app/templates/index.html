@@ -3,7 +3,7 @@
 {% block content %}
 
 <header class="jumbotron topper">
-  <H1>Welcome</H1>
+  <H1 class="welcome">Welcome</H1>
   <h3>To my Blog</h3>
 </header>
 <div class="container posts">
@@ -21,7 +21,7 @@
           <!-- Title -->
           <h2 class="card-header-title mb-3">{{post.title}}</h2>
           <!-- Text -->
-          <p class="mb-0"><i class="time fas fa-calendar mr-2"></i>26.07.2017</p>
+          <p class="mb-0"><i class="time fas fa-calendar mr-2"></i>{{post.date_posted}}</p>
 
         </div>
 
