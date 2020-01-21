@@ -7,7 +7,13 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
       <div>
-        <p>{{post.content}}</p>
+        <div class="card">
+          <div class="card-body">
+            <h2>{{post.title}}</h2>
+            <h4>{{post.summary}}</h4>
+            <p>{{post.content}}</p>
+          </div>
+        </div>
       </div>
       {{wtf.quick_form(comment_form)}}
       {%for comment in comments%}
