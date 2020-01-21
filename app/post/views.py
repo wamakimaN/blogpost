@@ -27,6 +27,8 @@ def newpost():
 def post(post_id):
  
     form = CommentForm()
+    post = Post.query.get_or_404(post_id)
+    comments = Comment.query.filter_by(post_id = post.id)
     if form.validate_on_submit():
         comment = Comment(post_id = post_id, description =form.description.data, author = current_user)
         db.session.add(comment)
@@ -34,7 +36,7 @@ def post(post_id):
         flash('Your comment was added!', 'success')
         return redirect(url_for('post.post', post_id = post_id))
     
-    post = Post.query.get_or_404(post_id)
-    return render_template('post/post.html', title=post.title, post=post,comment_form = form)
+    
+    return render_template('post/post.html', title=post.title, post=post,comment_form = form ,comments = comments)
 
 

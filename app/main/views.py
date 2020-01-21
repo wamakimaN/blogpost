@@ -23,7 +23,7 @@ def profile(uname):
 
     
     user = User.query.filter_by(username = uname).first()
-    posts = Post.query.all()
+    posts = Post.query.filter_by(user_id = user.id)
     
 
     return render_template("profile/profile.html",posts = posts ,user = user)
