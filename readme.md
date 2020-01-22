@@ -59,47 +59,25 @@ You can use the app [here](https://myblogers.herokuapp.com/)
 
 Clone this using the command below on your terminal:
 
-$ git clone  https://github.com/wamakimaN/movie-list.git
+$ git clone  https://github.com/wamakimaN/blogpost.git
+
+* install python and the requirements in requirements.txt.
+* run application by the command "./start.sh" in the terminal.
 
 ## Technologies Used
 
 * Python 3.6
-* Dependencies :
-alembic==1.3.2
-autopep8==1.4.4
-blinker==1.4
-Click==7.0
-dominate==2.4.0
-Flask==1.1.1
-Flask-Bootstrap==3.3.7.1
-Flask-Login==0.4.1
-Flask-Mail==0.9.1
-Flask-Migrate==2.5.2
-Flask-Script==2.0.6
-Flask-SQLAlchemy==2.4.1
-Flask-Uploads==0.2.1
-Flask-WTF==0.14.2
-gunicorn==20.0.4
-itsdangerous==1.1.0
-Jinja2==2.10.3
-Mako==1.1.0
-MarkupSafe==1.1.1
-psycopg2==2.8.4
-pycodestyle==2.5.0
-python-dateutil==2.8.1
-python-editor==1.0.4
-six==1.13.0
-SQLAlchemy==1.3.12
-visitor==0.1.3
-Werkzeug==0.16.0
-WTForms==2.2.1
+* Flask
+* Jinja flask
 
-* install python and the above dependencies.
-* run application by the command "./start.sh" in the terminal.
+
 
 ## Known bugs
 
-there are no known bugs at the moment.
+The posts appear from the first post ever posted to last. I would prefer if they started from the latest post.
+Same case applies to the comments.
+
+Any assistance on how to implement this will be highly appreciated.
 
 ## License
 
